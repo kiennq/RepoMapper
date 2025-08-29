@@ -1,0 +1,14 @@
+When you complete a task in this project:
+- Run the CLI locally to verify output:
+  - python repomap.py . --verbose
+  - Optionally include --chat-files and --other-files paths reflecting your change.
+- If working via MCP server, call the repo_map tool against the target project and inspect the returned report fields (definition_matches, reference_matches, total_files_considered) for sanity.
+- Clear caches if changes didn’t reflect:
+  - Delete .repomap.tags.cache.v1 directory or run with --force-refresh.
+- Lint/format (no enforced tool files present):
+  - Optional: ruff check .  | black .
+- Update README.md if behavior or options changed.
+- Commit:
+  - git add -A
+  - git commit -m "Describe change briefly"
+  - git push
